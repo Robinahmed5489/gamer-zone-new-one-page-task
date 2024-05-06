@@ -1,0 +1,165 @@
+:root {
+  --primary-color: #ff42a5;
+  --secondary-color: #4ec5f7;
+  --header-size: 1.5rem;
+  --font-color: #6d687b;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-gradient {
+  background: -webkit-linear-gradient(#ff6ce4, #7d2ac0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-title {
+  font-size: var(--header-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-title img {
+  height: 30px;
+  width: 70px;
+}
+nav h3 {
+  margin-left: 10px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .navbar ul {
+  display: flex;
+  gap: 10px;
+  margin: 0 15px;
+}
+nav .navbar ul li {
+  list-style: none;
+  color: var(--font-color);
+  padding: 10px 20px;
+  font-size: small;
+}
+nav .navbar ul li a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+nav .navbar .box-nav {
+  background-color: #e7e6e9;
+}
+nav .navbar .box-nav .fa-youtube {
+  color: red;
+}
+nav .navbar .box-nav .fa-tiktok {
+  color: darkmagenta;
+}
+.banner {
+  background-color: #fbf7fd;
+  padding: 70px 0;
+}
+.banner h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.banner .bigheading {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.banner .banner-info ul {
+  padding: 0;
+  margin: 0 4px;
+  margin-bottom: 30px;
+}
+.banner .banner-info ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: small;
+  transition: 0.3s ease-in-out;
+}
+.banner .banner-info ul li:hover {
+  font-size: medium;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  font-size: small;
+  color: white;
+  border: 0px;
+  border-radius: 50px;
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+  font-size: small;
+  color: white;
+  border: 0px;
+  border-radius: 50px;
+}
+.banner .banner-image img {
+  width: 100%;
+}
+.banner .container div {
+  width: 100%;
+}
+.banner .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5em;
+}
+@media screen and (max-width: 992px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  nav .navbar ul li {
+    padding: 10px 8px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 99%;
+    margin: 0 auto;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav .navbar ul {
+    margin: 0 2px;
+  }
+  .banner .container {
+    flex-direction: column;
+  }
+  .banner .container .banner-info {
+    text-align: center;
+  }
+  .banner .banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .banner-image img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav .navbar ul li {
+    padding: 2px;
+  }
+}
