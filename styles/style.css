@@ -177,8 +177,7 @@ nav .navbar .box-nav .fa-tiktok {
 }
 /* video section starts  */
 .video-section {
-  padding: 50px 0;
-  margin: 50px 0;
+  margin: 75px 0;
 }
 .video-section .gamer-title,
 .video-section .info {
@@ -199,6 +198,7 @@ nav .navbar .box-nav .fa-tiktok {
 .video-section .image {
   position: relative;
 }
+/* overlay section  */
 .video-section .image .overlay {
   position: absolute;
   top: 0;
@@ -209,7 +209,7 @@ nav .navbar .box-nav .fa-tiktok {
   transition: opacity 0.4s ease-in-out;
   background-color: black;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .video-section .image .overlay .content {
   position: absolute;
@@ -229,6 +229,92 @@ nav .navbar .box-nav .fa-tiktok {
 .video-section .image:hover .overlay {
   opacity: 0.8;
 }
+.online .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.online .container div {
+  width: 100%;
+}
+.online .container .online-image img {
+  width: 100%;
+}
+.online .container .online-image .overdrive-image img {
+  width: 40%;
+  height: auto;
+}
+.online .container .online-image {
+  position: relative;
+}
+.online .container .online-image .overdrive-image {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  z-index: 999;
+}
+/* career starr  */
+.career {
+  background-color: #ff42a5;
+  margin-top: 70px;
+  padding: 25px 0;
+  color: aliceblue;
+  font-size: small;
+}
+.text-white {
+  color: aliceblue;
+}
+.career .career-image img {
+  width: 100%;
+}
+.career .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.career .container .career-image,
+.career .container .career-data {
+  width: 100%;
+}
+.career .container .career-data .teams {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+.btn-white {
+  background-color: aliceblue;
+  color: var(--primary-color);
+  margin: 30px 0;
+}
+
+/* game category :start */
+.category {
+  color: var(--font-color);
+  font-size: smaller;
+  margin: 70px 0;
+}
+.category .game-category {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.category .gamy-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #bebebe;
+  border-radius: 50px;
+}
+.category .gamy-type:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.category .gamy-type img {
+  width: 50px;
+}
 
 @media screen and (max-width: 992px) {
   .container {
@@ -238,11 +324,21 @@ nav .navbar .box-nav .fa-tiktok {
   nav .navbar ul li {
     padding: 10px 8px;
   }
+  .video-section .container {
+    width: 70%;
+  }
+  .video-section .video {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category .game-category {
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
   .container {
-    width: 99%;
+    width: 95%;
     margin: 0 auto;
   }
   nav {
@@ -268,18 +364,47 @@ nav .navbar .box-nav .fa-tiktok {
   .gamer .container {
     flex-direction: column-reverse;
   }
-  .gamer .container .gamer-image {
+  .gamer .container .gamer-image,
+  .online .container .online-image {
     width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .gamer .container .gamer-image img {
+  .gamer .container .gamer-image img,
+  .online .container .online-image img {
     width: 90%;
   }
   .gamer .container .gamer-data {
     text-align: center;
+  }
+  .video-section .video {
+    grid-template-columns: 1fr;
+  }
+  .online .container {
+    flex-direction: column-reverse;
+  }
+  .online {
+    text-align: center;
+  }
+  .online .container .online-image .overdrive-image {
+    position: absolute;
+    top: 62%;
+    left: 28%;
+    z-index: 999;
+  }
+  .career .container {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+  .career .container .career-data {
+    text-align: center;
+  }
+  .category .game-category {
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 1rem;
   }
 }
 
